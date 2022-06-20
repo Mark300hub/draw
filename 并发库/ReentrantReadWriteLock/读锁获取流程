@@ -1,1 +1,134 @@
-<mxfile host="app.diagrams.net" modified="2022-06-20T07:28:08.988Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" version="20.0.1" etag="_xUmbw0cWqzw1FlfD8cB" type="github"><diagram id="GgpDhgf7Hd228OHQwoZj">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-06-20T07:28:37.059Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="QvJpcNkpIj7bdnWAcFq2" version="20.0.1" type="github">
+  <diagram id="GgpDhgf7Hd228OHQwoZj" name="Page-1">
+    <mxGraphModel dx="1022" dy="507" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BEzxp7_o6zqkTHH2PJMk-2" target="BEzxp7_o6zqkTHH2PJMk-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-2" value="&lt;b&gt;写锁获取流程&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BEzxp7_o6zqkTHH2PJMk-4" target="BEzxp7_o6zqkTHH2PJMk-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-4" value="&lt;b&gt;获取同步状态 c&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="400" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BEzxp7_o6zqkTHH2PJMk-6" target="BEzxp7_o6zqkTHH2PJMk-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-6" value="&lt;b&gt;获取写锁持有数 w&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="460" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BEzxp7_o6zqkTHH2PJMk-11" target="BEzxp7_o6zqkTHH2PJMk-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-8" value="&lt;b&gt;是&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="BEzxp7_o6zqkTHH2PJMk-7">
+          <mxGeometry x="-0.1081" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BEzxp7_o6zqkTHH2PJMk-11" target="BEzxp7_o6zqkTHH2PJMk-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-10" value="&lt;b&gt;否&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="BEzxp7_o6zqkTHH2PJMk-9">
+          <mxGeometry x="-0.6489" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-11" value="&lt;b&gt;c != 0&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="540" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BEzxp7_o6zqkTHH2PJMk-16" target="BEzxp7_o6zqkTHH2PJMk-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-13" value="&lt;b&gt;是&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="BEzxp7_o6zqkTHH2PJMk-12">
+          <mxGeometry x="-0.1444" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BEzxp7_o6zqkTHH2PJMk-16" target="BEzxp7_o6zqkTHH2PJMk-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-15" value="&lt;b&gt;否&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="BEzxp7_o6zqkTHH2PJMk-14">
+          <mxGeometry x="-0.1145" relative="1" as="geometry">
+            <mxPoint y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-16" value="&lt;b&gt;w == 0&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="414" y="540" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-17" value="&lt;b&gt;锁被占用&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="340" y="540" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BEzxp7_o6zqkTHH2PJMk-22" target="BEzxp7_o6zqkTHH2PJMk-23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="665" />
+              <mxPoint x="610" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-19" value="&lt;b&gt;否&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="BEzxp7_o6zqkTHH2PJMk-18">
+          <mxGeometry x="-0.1719" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BEzxp7_o6zqkTHH2PJMk-22" target="BEzxp7_o6zqkTHH2PJMk-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-21" value="&lt;b&gt;是&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="BEzxp7_o6zqkTHH2PJMk-20">
+          <mxGeometry x="-0.1489" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-22" value="&lt;b&gt;当前线程是否为持有写锁的线程&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="368" y="640" width="212" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-23" value="&lt;b&gt;获取写锁失败&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="408" y="420" width="132" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-24" value="&lt;b&gt;写锁已被占用&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="470" y="590" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-25" value="&lt;b style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(248, 249, 250); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;说明当前锁状态为读锁&lt;br&gt;&lt;/b&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="510" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-26" value="&lt;b&gt;说明写锁已被其他线程持有&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="560" y="530" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-27" value="&lt;b&gt;设置同步状态&lt;br&gt;获取写锁成功&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="408" y="740" width="132" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BEzxp7_o6zqkTHH2PJMk-30" target="BEzxp7_o6zqkTHH2PJMk-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-29" value="&lt;b&gt;否&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="BEzxp7_o6zqkTHH2PJMk-28">
+          <mxGeometry x="-0.7462" relative="1" as="geometry">
+            <mxPoint y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-30" value="&lt;b&gt;当前线程是否应该阻塞&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="620" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BEzxp7_o6zqkTHH2PJMk-33" target="BEzxp7_o6zqkTHH2PJMk-27">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-32" value="&lt;b&gt;成功&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="BEzxp7_o6zqkTHH2PJMk-31">
+          <mxGeometry x="-0.0539" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BEzxp7_o6zqkTHH2PJMk-33" value="&lt;b&gt;CAS竞争锁&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="700" width="160" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
